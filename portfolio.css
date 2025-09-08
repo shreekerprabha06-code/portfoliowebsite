@@ -1,0 +1,1952 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-margin-top: 50px;
+    scroll-snap-type: y mandatory;
+
+
+
+
+}
+
+.tile {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+
+
+}
+
+#one {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    z-index: 2;
+
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+}
+.menubar{
+    display: none;
+    position: fixed;
+    color: rgb(12, 12, 12);
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 8px;
+    z-index: 3;
+    cursor: pointer;
+    
+}
+.sublist{
+    list-style-type: none;
+}
+.menubar:hover{
+    color: black;
+    .sidenav{
+        transform: translateX(105vw);
+    }
+}
+
+.logo {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-family: "Lilita One", sans-serif;
+    color: rgba(255, 250, 250, 0.88);
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.logo h1{
+    cursor: pointer;
+    
+}
+
+
+.rightnav {
+    position: relative;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-top: 15px;
+    color: rgba(239, 239, 239, 0.88);
+}
+.rightnav a{
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    color: rgba(239, 239, 239, 0.88);
+}
+.rightnav li {
+    list-style-type: none;
+    position: relative;
+    cursor: pointer;
+    
+   
+}
+
+.list1::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    top: 25px;
+    transition: 0.3s;
+
+}
+.list1{
+    transition: 0.3s;
+}
+.list1:hover{
+    transform: scale(1.05);
+}
+.list1:hover::after{
+       width: 100%;
+}
+.sidenav{
+    background-color: black;
+    color: rgb(224, 223, 223);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    
+    
+    
+    transition: 0.3s;
+    
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left:-120vw;
+    
+    
+    
+
+}
+
+.sidenav li{
+    
+    list-style-type: none ;
+    text-align: center;
+    
+    line-height: 15vh;
+    transition: 0.3s;
+    
+    
+
+}
+.sidenav h1{
+    font-family: "Lilita One", sans-serif;
+    font-size: 2rem;
+    
+}
+.sidenav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s;
+}
+.navcon:hover{
+    transform: scale(1.15);
+    color: rgb(181, 180, 180);
+}
+
+.name1{
+    font-family: "Lilita One", sans-serif;
+    
+   
+}
+
+#two {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    position: sticky;
+    top: 0vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+
+    z-index: -1;
+    color: white;
+    overflow: hidden;
+}
+
+
+
+#two video {
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+
+    right: -300px;
+    bottom: 0px;
+    opacity: 0.4;
+    z-index: -2;
+
+}
+.con1 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+    padding-left: 60px;
+    
+    grid-row: 1/2;
+    grid-column: 2/3;
+    position: fixed;
+
+
+}
+
+
+.intro {
+
+    display: inline-block;
+
+
+    animation: visb 3s;
+
+
+}
+
+@keyframes visb {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.intro h1{
+
+    width: 100%;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgba(255, 250, 250, 0.88);
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 1;
+    animation:
+        typing 0.5s steps(6),
+        step-end  alternate;
+    animation-delay: 3s;
+
+
+
+}
+
+
+
+@keyframes typing {
+    0% {
+
+        width: 0%;
+    }
+
+}
+
+.name {
+
+    display: inline-block;
+
+
+    animation: visb 4.5s;
+
+
+}
+
+@keyframes visb {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.name h1 {
+
+    width: 100%;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 500;
+    font-size: 110px;
+    color: rgba(255, 250, 250, 0.88);
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 1;
+    animation:
+        typing 1s steps(12),
+        step-end infinite alternate;
+    animation-delay: 4.5s;
+
+
+
+}
+
+
+
+.moto1 {
+
+    display: inline-block;
+
+
+    animation: visb 7s;
+
+
+}
+
+
+.moto1 h1 {
+
+    width: 100%;
+    color: rgba(255, 250, 250, 0.88);
+    font-weight: 100;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 1;
+    animation:
+        typing 3s steps(46),
+        step-end  alternate;
+    animation-delay: 7s;
+
+
+
+}
+
+
+.moto2 {
+
+    display: inline-block;
+
+
+    animation: visb 9.5s;
+
+
+}
+
+.moto2 h1 {
+
+    width: 100%;
+    color: rgba(255, 250, 250, 0.88);
+    font-weight: 100;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 1;
+    animation:
+        typing 1.9s steps(17),
+        step-end  alternate;
+    animation-delay: 9.5s;
+
+
+
+}
+
+#three {
+
+    position: sticky;
+    top: 50px;
+    height: 100vh;
+    width: 100vw;
+    
+    background: linear-gradient(83deg, rgb(8, 8, 8) 0%, rgba(28,28,28,1) 100%, rgba(0,0,0,1) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.161);
+    z-index: -1;
+    color: white;
+    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    transition: 0.3s;
+}
+.profileimg{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    
+    
+    
+}
+.photo1{
+    height: 60%;
+    width: 80%;
+    padding-left: 10%;
+    padding-top: 15%;
+    flex-shrink: 0;
+
+}
+.photo1 img{
+    overflow: hidden;
+   width: 100%;
+   height: 100%;
+   border-radius: 3px;
+   border: 1px solid rgba(255, 255, 255, 0.384);
+}
+
+.aboutme{
+    grid-row: 1/2;
+    grid-column: 3/6;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    
+}
+.matter1{
+   
+   padding-top: 5%;
+}
+.matter1 h1{
+    font-size: 6em;
+    font-family: "Lilita One", sans-serif;
+    
+}
+.matter1 p{
+    font-family: "Poppins", sans-serif;
+}
+.stacks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.aboutme h2{
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.stacks img{
+    height:50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.178);
+   
+}
+
+
+
+
+
+
+#four {
+    position: sticky;
+    top: 50px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    background: linear-gradient(83deg, rgb(8, 8, 8) 0%, rgba(28,28,28,1) 100%, rgba(0,0,0,1) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.161);
+    color: white;
+    
+}
+.tit1{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    font-family: "Lilita One", sans-serif;
+    font-size: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.161);
+    
+}
+.time{
+    background-color: rgba(62, 62, 62, 0.007);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding-right: 30px;
+    
+    
+}
+.time  div{
+    width: 260px;
+    height: 260px;
+    background-color: rgb(34, 34, 34);
+    margin-left: 50px;
+    margin-bottom: 20%;
+    border: 1px solid  rgba(255, 255, 255, 0.161);
+    border-radius: 5px;
+
+}
+.time div::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 4px;
+    width: 0%;
+    left: 60px;
+    top: 320px;
+    z-index: -1;
+    
+    transition: 0.5s;
+}
+.abhyaz,.srm,.inter,.ssc{
+    transition: 0.3s;
+}
+.abhyaz:hover{
+    border-color: white;
+}
+
+.srm:hover{
+    border-color: white;
+    
+}
+.inter:hover{
+    border-color: white;
+}
+.ssc:hover{
+    border-color: white;
+}
+.abhyaz:hover::after {
+    width: 0%;
+    
+}
+.srm:hover::after {
+    width: 25%;
+}
+.inter:hover::after {
+    width: 50%;
+}
+.ssc:hover::after {
+    width: 75%;
+}
+
+.abhyaz,.srm,.inter,.ssc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.abhyaz,.srm,.inter,.ssc h1{
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+}
+.abhyaz,.srm,.inter,.ssc h5{
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+.abhyaz,.srm,.inter,.ssc h3{
+    font-family: "Poppins", sans-serif;
+}
+.abhyaz,.srm,.inter,.ssc p{
+    font-family: "Poppins", sans-serif;
+}
+.ssc h1{
+    margin-top: -20px;
+    font-size: 1.8rem;
+    line-height: 35px;
+    margin-bottom: 5px;
+    margin-left: -15px;
+}
+.ssc h5{
+    margin-top: 0.1rem;
+    margin-left: -15px;
+}
+.ssc h3{
+    margin-left: -15px;
+}
+.inter h5{
+    margin-bottom: 10px;
+}
+
+
+#five {
+    position: sticky;
+    top: 50px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(3, 3, 3);
+    z-index: 1;
+    color: white;
+    background: linear-gradient(83deg, rgb(8, 8, 8) 0%, rgba(28,28,28,1) 100%, rgba(0,0,0,1) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.161);
+}
+.tit2{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    font-family: "Lilita One", sans-serif;
+    font-size: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.161);
+    
+}
+.works{
+    background-color: rgba(62, 62, 62, 0.007);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 50px ;
+
+}
+
+.work1{
+    background-image: url(images/Canva.png);
+    
+    width: 260px;
+    height: 350px;
+    background-color: rgb(34, 34, 34);
+    margin-left: 50px;
+    margin-bottom: 20%;
+    border: 1px solid  rgba(255, 255, 255, 0.336);
+    border-radius: 5px;
+    margin-top: 17%;
+    overflow: hidden;
+    box-shadow: 3px 2px 10px rgb(0, 0, 0);
+    transition: 0.3s;
+    
+    
+    
+}
+.workinfo1{
+    width: 100%;
+    height: 100%;
+background: rgba(0, 0, 0, 0.421);
+border-radius: 5px;
+
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    transition: .7s;
+    opacity: 0;
+    
+
+}
+.work1:hover{
+    transform: scale(1.05);
+    .workinfo1{
+        opacity: 1;
+        
+    }
+}
+.work2:hover{
+    transform: scale(1.05);
+    .workinfo1{
+        opacity: 1;
+        
+    }
+}
+.work3:hover{
+    transform: scale(1.05);
+    .workinfo1{
+        opacity: 1;
+        
+    }
+}
+.workinfo1 h1{
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    
+}
+.workinfo1 h4{
+    font-family: "Poppins", sans-serif;
+}
+.work2{
+    background-image: url(images/Canva\ \(1\).png);
+    width: 260px;
+    height: 350px;
+    background-color: rgb(34, 34, 34);
+    margin-left: 50px;
+    margin-bottom: 20%;
+    border: 1px solid  rgba(255, 255, 255, 0.336);
+    border-radius: 5px;
+    margin-top: 17%;
+    overflow: hidden;
+    box-shadow: 3px 2px 10px rgb(0, 0, 0);
+}
+.work3{
+    background-image: url(images/Canva\ \(2\).png);
+    width: 260px;
+    height: 350px;
+    background-color: rgb(34, 34, 34);
+    margin-left: 50px;
+    margin-bottom: 20%;
+    border: 1px solid  rgba(255, 255, 255, 0.336);
+    border-radius: 5px;
+    margin-top: 17%;
+    overflow: hidden;
+    box-shadow: 3px 2px 10px rgb(0, 0, 0);
+}
+
+#six {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(12, 12, 12);
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.161);
+    
+}
+.endcard{
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: "Lilita One", sans-serif;
+    font-size: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.161);
+    color: rgb(239, 238, 238);
+    
+}
+.dcv h2{
+    color: rgb(239, 238, 238);
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+.dcv button{
+    width:150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(219, 219, 219);
+    font-family: "Poppins", sans-serif;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-top: 10px;
+    
+    
+}
+.dcv button:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    
+}
+.dcv a{
+    text-decoration: none;
+    
+}
+.details h2{
+    color: rgb(239, 238, 238);
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.details button{
+    width:70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(98, 69, 226);
+    font-family: "Poppins", sans-serif;
+    border: 1px solid  rgba(71, 71, 71, 0.634);
+    color: rgb(238, 238, 238);
+    font-size: .8rem;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+.details input{
+    width: 80%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.86);
+    border: none;
+    margin-bottom: 10px;
+
+    
+}
+.details label{
+    color: rgb(239, 238, 238);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    font-weight: 500;
+    
+}
+
+.details button:hover{
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+.form{
+    display: flex;
+    
+    height: 100%;
+    background: linear-gradient(83deg, rgb(8, 8, 8) 0%, rgba(28,28,28,1) 100%, rgba(0,0,0,1) 100%);
+    
+}
+.details{
+    
+    width: 70%;
+    padding-top: 5%;
+    padding-left: 20%;
+    
+}
+.dcv{
+    
+    width: 30%;
+    display: flex;
+    padding-top: 10%;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.footer {
+    position: relative;
+    bottom: 0px;
+    height: 40vh;
+    width: 100vw;
+    
+    z-index: 2;
+    background: linear-gradient(83deg, rgb(8, 8, 8) 0%, rgba(28,28,28,1) 100%, rgba(0,0,0,1) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.161);
+    
+}
+
+@media only screen and (max-width:379px) {
+    .rightnav{
+        display: none;
+     }
+     #two{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     #two video{
+        right:-1000px;
+        
+        
+}
+     .con1{
+        margin-top: 0;
+        justify-content: center;
+        align-items: center;
+        margin-top: -90%;
+        padding-right: 60px;
+        
+        
+         
+         
+     }
+     .intro h1{
+        font-size: 30px;
+   
+      }
+      .name h1{
+       font-size: 50px;
+   
+     }
+     .moto1 h1{
+        font-size: 14px;
+    
+      }
+      .moto2 h1{
+        font-size: 14px;
+    
+      }
+     
+      .menubar{
+        display: inline-block;
+      }
+      .logo{
+       margin-left: 8vh;
+       width: 300px;
+       font-size: 15px;
+      } 
+      .sidenav li{
+        margin-left: 12vh;
+      }
+      #three{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr ;
+      }
+      .profileimg{
+        display: none;
+      }
+      .matter1 h1{
+           font-size: 3.5rem;
+      }
+      .stacks img{
+        margin-bottom: 10px;
+      }
+      .tit1 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit1 h1{
+        font-size: 2rem;
+      }
+      .time{
+        flex-direction: column;
+        
+        
+      }
+      
+      .time div{
+        height: 100px;
+        margin-top: 0px;
+       
+        margin-bottom: 10%;
+        
+        
+      }
+    
+      .abhyaz,.srm,.inter,.ssc h1{
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc h5{
+        font-size: 0.7rem;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+    .abhyaz,.srm,.inter,.ssc h3{
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc p{
+        font-family: "Poppins", sans-serif;
+    }
+    .inter h1{
+        font-size: 1.2rem;
+    }
+    .inter h3{
+        font-size: 0.7rem;
+    }
+    .inter h5{margin-bottom: 1px;}
+    
+    .ssc h1{
+        margin-top: 8px;
+        font-size: 1rem;
+        line-height: 20px;
+        margin-bottom: 0px;
+    }
+    .ssc h3{
+        font-size: 0.7rem;
+    }
+    .ssc h5{
+        margin-top: 0.1rem;
+        margin-bottom: 3px;
+    }
+    .time div::after{
+        display: none;
+    }
+    .tit2 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit2 h1{
+        font-size: 2rem;
+      }
+    .works{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        
+    }
+    .work1,.work2,.work3{
+        height: 160px;
+        width: 180px;
+        margin-top: 5%;
+        margin-bottom: 0px;
+        background-size: cover;
+    }
+    .workinfo1 h1{
+        font-size: 1.2rem;
+        padding-right: 10px;
+    }
+    .workinfo1 h4{
+        font-size: 0.5rem;
+        padding-right: 10px;
+    }
+    .endcard {
+        padding-top: 10px;
+        margin-bottom: 0px;
+       
+
+        
+      }
+      .endcard h1{
+        font-size: 1rem;
+      }
+      .form{
+        flex-direction: column;
+      }
+      .dcv{
+        width: 100%;
+      }
+
+      
+}
+@media only screen and (min-width:380px) and (max-width:480px) {
+    .rightnav{
+       display: none;
+    }
+    #two{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    #two video{
+       right:-1000px;
+       
+       
+      
+   }
+    .con1{
+       margin-top: 0;
+       justify-content: center;
+       align-items: center;
+       margin-top: -120%;
+       padding-right: 60px;
+       
+       
+        
+        
+    }
+    .intro h1{
+       font-size: 40px;
+  
+     }
+     .name h1{
+      font-size: 70px;
+  
+    }
+    .moto1 h1{
+       font-size: 16px;
+   
+     }
+     .moto2 h1{
+       font-size: 16px;
+   
+     }
+     
+     .menubar{
+       display: inline-block;
+     }
+     .logo{
+      margin-left: 8vh;
+      width: 300px;
+      font-size: 15px;
+     } 
+     .sidenav li{
+       margin-left: 10vh
+     }
+     #three{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr ;
+      }
+      .profileimg{
+        display: none;
+      }
+      .matter1 h1{
+           font-size: 5rem;
+           margin-bottom: 10px;
+      }
+      .stacks img{
+        margin-bottom: 10px;
+      }
+     .tit1 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit1 h1{
+        font-size: 2rem;
+      }
+      .time{
+        flex-direction: column;
+        
+        
+      }
+      
+      .time div{
+        height: 130px;
+        margin-top: 0px;
+       
+        margin-bottom: 10%;
+        
+        
+      }
+    
+      .abhyaz,.srm,.inter,.ssc h1{
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc h5{
+        font-size: 0.7rem;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+    .abhyaz,.srm,.inter,.ssc h3{
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc p{
+        font-family: "Poppins", sans-serif;
+    }
+    .inter h1{
+        font-size: 1.2rem;
+    }
+    .inter h3{
+        font-size: 0.7rem;
+    }
+    .inter h5{margin-bottom: 1px;}
+    
+    .ssc h1{
+        margin-top: 8px;
+        font-size: 1.2rem;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+    .ssc h5{
+        margin-top: 0.1rem;
+        margin-bottom: 5px;
+    }
+    .ssc h3{
+        font-size: 1rem;
+    }
+    .time div::after{
+        display: none;
+    }
+    .tit2 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit2 h1{
+        font-size: 2rem;
+      }
+    .works{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        
+    }
+    .work1,.work2,.work3{
+        height: 200px;
+        width: 200px;
+        margin-top: 5%;
+        margin-bottom: 0px;
+        background-size: cover;
+    }
+    .workinfo1 h1{
+        font-size: 1.2rem;
+        padding-right: 10px;
+    }
+    .workinfo1 h4{
+        font-size: 0.5rem;
+        padding-right: 10px;
+    }
+    .endcard {
+        padding-top: 10px;
+        margin-bottom: 0px;
+       
+
+        
+      }
+      .endcard h1{
+        font-size: 1rem;
+      }
+      .form{
+        flex-direction: column;
+      }
+      .dcv{
+        width: 100%;
+      }
+
+}
+@media  only screen and (min-width:481px) and (max-width:767px) {
+    .rightnav{
+      display: none;
+    } 
+    .menubar{
+      display: inline-block;
+    }
+    .logo{
+     margin-left: 8vh;
+     width: 300px;
+    } 
+   .name h1{
+      font-size: 5rem;
+   }
+   #two video{
+          right: -850px;
+          
+          
+    }
+    #two{
+        display: flex;
+        justify-content: center;
+
+        
+    }
+    .con1{
+        padding-top: 100px;
+       align-items: center;
+        margin-right: 40px;
+        
+    }
+    .sidenav li{
+        margin-left: 18vh
+      }
+    #three{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr ;
+      }
+      .profileimg{
+        display: none;
+      }
+      .matter1 h1{
+           font-size: 3.5rem;
+      }
+      .stacks img{
+        margin-bottom: 10px;
+      }
+    .tit1 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit1 h1{
+        font-size: 2rem;
+      }
+      .time{
+        flex-direction: column;
+        
+        
+      }
+      
+      .time div{
+        height: 100px;
+        width: 90%;
+        margin-top: 0px;
+       
+        margin-bottom: 5%;
+        
+        
+      }
+    
+      .abhyaz,.srm,.inter,.ssc h1{
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc h5{
+        font-size: 0.7rem;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+    .abhyaz,.srm,.inter,.ssc h3{
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc p{
+        font-family: "Poppins", sans-serif;
+    }
+    .inter h1{
+        font-size: 1.2rem;
+    }
+    .inter h3{
+        font-size: 0.7rem;
+    }
+    .inter h5{margin-bottom: 1px;}
+    
+    .ssc h1{
+        margin-top: 8px;
+        font-size: 1.2rem;
+    }
+    .ssc h5{
+        margin-bottom: 5px;
+    }
+    .time div::after{
+        display: none;
+    }
+    .tit2 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit2 h1{
+        font-size: 2rem;
+      }
+    .works{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30%;
+        padding-bottom: 100px;
+        
+    }
+    .work1,.work2,.work3{
+        height: 160px;
+        width: 175px;
+        margin-top: 1%;
+        margin-bottom: 10px;
+        background-size: cover;
+        
+    }
+    .workinfo1 h1{
+        font-size: 1.2rem;
+        padding-right: 20px;
+    }
+    .workinfo1 h4{
+        font-size: 0.5rem;
+        padding-right: 10px;
+    }
+    .endcard{
+        font-size: 1rem;
+    }
+    .dcv{
+        margin-left: 20px;
+    }
+  } 
+
+@media only screen and (min-width:768px) and (max-width:853px) {
+    .rightnav{
+        font-size: 13px;
+        margin-right: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 18px;
+    
+    }
+    #two video{
+          right: -850px;
+          
+          
+    }
+    #two{
+        display: flex;
+        justify-content: center;
+
+        
+    }
+    .con1{
+        padding-top: 100px;
+       align-items: center;
+        margin-right: 40px;
+        
+    }
+    #three{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr ;
+      }
+      .profileimg{
+        display: none;
+      }
+      .matter1 h1{
+           font-size: 3.5rem;
+      }
+      .stacks img{
+        margin-bottom: 10px;
+      }
+    .tit1 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit1 h1{
+        font-size: 2rem;
+      }
+      .time{
+        flex-direction: column;
+        
+        
+      }
+      
+      .time div{
+        height: 100px;
+        width: 90%;
+        margin-top: 0px;
+       
+        margin-bottom: 5%;
+        
+        
+      }
+    
+      .abhyaz,.srm,.inter,.ssc h1{
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc h5{
+        font-size: 0.7rem;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+    .abhyaz,.srm,.inter,.ssc h3{
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc p{
+        font-family: "Poppins", sans-serif;
+    }
+    .inter h1{
+        font-size: 1.2rem;
+    }
+    .inter h3{
+        font-size: 0.7rem;
+    }
+    .inter h5{margin-bottom: 1px;}
+    
+    .ssc h1{
+        margin-top: 8px;
+        font-size: 1.2rem;
+    }
+    .ssc h5{
+        margin-bottom: 5px;
+    }
+    .time div::after{
+        display: none;
+    }
+    .tit2 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit2 h1{
+        font-size: 2rem;
+      }
+    .works{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30%;
+        padding-bottom: 100px;
+        
+    }
+    .work1,.work2,.work3{
+        height: 250px;
+        width: 230px;
+        margin-top: 1%;
+        margin-bottom: 10px;
+        background-size: cover;
+        
+    }
+    .workinfo1 h1{
+        font-size: 1.5rem;
+        padding-right: 20px;
+    }
+    .workinfo1 h4{
+        font-size: 0.8rem;
+        padding-right: 10px;
+    }
+    .dcv{
+        border: 1px solid white;
+        width: 50%;
+        margin-right: -15%;
+        
+    }
+    
+
+
+}
+
+@media only screen and (width:540px) and (height:720px) {
+     
+    .rightnav{
+        font-size: 10px;
+    }
+    .intro h1{
+        font-size: 30px;
+    }
+    .name h1{
+        font-size: 80px;
+    }
+
+    
+}
+
+@media only screen and (min-width:854px) and (max-width:1024px)  {
+    #two video{
+        right: -350px;
+        
+        
+  }
+  .con1{
+    grid-row: 1/2;
+    grid-column: 2/2;
+    margin-left: -200px;
+    justify-content: center;
+    padding-top: 150px;
+   align-items: center;
+    margin-right: 40px;
+    
+}
+#three{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr ;
+  }
+  .profileimg{
+    display: none;
+  }
+  .matter1 h1{
+       font-size: 3.5rem;
+  }
+  .stacks img{
+    margin-bottom: 10px;
+  }
+.tit1 {
+    padding-top: 10px;
+    margin-bottom: -50px;
+   
+
+    
+  }
+  .tit1 h1{
+    font-size: 2rem;
+  }
+  .time{
+    flex-direction: column;
+    
+    
+  }
+  
+  .time div{
+    height: 90px;
+    width: 90%;
+    margin-top: 0px;
+   
+    margin-bottom: 5%;
+    
+    
+  }
+
+  .abhyaz,.srm,.inter,.ssc h1{
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+}
+.abhyaz,.srm,.inter,.ssc h5{
+    font-size: 0.7rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+.abhyaz,.srm,.inter,.ssc h3{
+    font-family: "Poppins", sans-serif;
+}
+.abhyaz,.srm,.inter,.ssc p{
+    font-family: "Poppins", sans-serif;
+}
+.inter h1{
+    font-size: 1.2rem;
+}
+.inter h3{
+    font-size: 0.7rem;
+}
+.inter h5{margin-bottom: 1px;}
+
+.ssc h1{
+    margin-top: 8px;
+    font-size: 1.2rem;
+}
+.ssc h5{
+    margin-bottom: 5px;
+}
+.time div::after{
+    display: none;
+}
+.works{
+    padding-left: 0;
+}
+
+    
+}
+
+@media only screen and (min-width:1025px) {
+     
+    .con1{
+      margin-left: -60px;
+      padding-top: 12%;
+      
+      
+    }
+}  
+
+  
+  
+@media only screen and (min-height:279px) and (max-height:400px) {
+    #two video{
+        bottom: -100px;
+    }
+    
+    
+}   
+
+@media only screen and (min-height:1180px) and (max-height:1280px) {
+    .con1{
+       margin-top: 20%;
+       align-items: center;
+        margin-right: 40px;
+        
+    }
+    .intro h1{
+        font-size: 60px;
+   
+      }
+      .name h1{
+       font-size: 140px;
+   
+     }
+     .moto1 h1{
+        font-size: 30px;
+    
+      }
+      .moto2 h1{
+        font-size: 30px;
+    
+      }
+      #three{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+      }
+     .profileimg{
+        display: block;
+        grid-row: 1/2;
+        grid-column: 1/2;
+     }
+     .photo1{
+        height: 400px;
+        padding-top: 25%;
+     }
+      
+      .aboutme{
+        grid-row: 1/3;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        
+      }
+      .matter1{
+        grid-row: 1/3;
+        grid-column: 2/3;
+        padding-left: 20px;
+      }
+      
+      .stacks{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        align-content: center;
+        margin-top: -80px;
+      }
+      .aboutme h2{
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+      
+      .matter1 p{
+        font-size: 1.2rem;
+      }
+      .matter1 h1{
+           font-size: 5rem;
+      }
+      .stacks img{
+        margin-bottom: 10px;
+        min-height: 70px;
+      }
+    .tit1 {
+        padding-top: 10px;
+        margin-bottom: -50px;
+       
+
+        
+      }
+      .tit1 h1{
+        font-size: 2rem;
+      }
+      .time{
+        flex-direction: column;
+        
+        
+      }
+      
+      .time div{
+        height: 150px;
+        width: 90%;
+        margin-top: 0px;
+       
+        margin-bottom: 5%;
+        
+        
+      }
+    
+      .abhyaz,.srm,.inter,.ssc h1{
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc h5{
+        font-size: 0.7rem;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+    .abhyaz,.srm,.inter,.ssc h3{
+        font-family: "Poppins", sans-serif;
+    }
+    .abhyaz,.srm,.inter,.ssc p{
+        font-family: "Poppins", sans-serif;
+    }
+    .inter h1{
+        font-size: 1.2rem;
+    }
+    .inter h3{
+        font-size: 0.7rem;
+    }
+    .inter h5{margin-bottom: 1px;}
+    
+    .ssc h1{
+        margin-top: 8px;
+        font-size: 1.2rem;
+    }
+    .ssc h5{
+        margin-bottom: 5px;
+    }
+    .time div::after{
+        display: none;
+    }
+
+}
+@media only screen and (min-height:1300px) and (max-height:1400px) {
+    #two video{
+        right: -1000px;
+
+    }
+    .intro h1{
+        font-size: 60px;
+   
+      }
+      .name h1{
+       font-size: 120px;
+   
+     }
+     .moto1 h1{
+        font-size: 30px;
+    
+      }
+      .moto2 h1{
+        font-size: 30px;
+    
+      }
+      .con1{
+       
+       
+        margin-left: -400px;
+        
+        }
+        #three{
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr ;
+          }
+         .profileimg{
+            display: block;
+            grid-row: 1/2;
+            grid-column: 1/2;
+         }
+         .photo1{
+            height: 500px;
+            padding-top: 25%;
+         }
+          
+          .aboutme{
+            grid-row: 1/3;
+            grid-column: 1/3;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            
+          }
+          .matter1{
+            grid-row: 1/3;
+            grid-column: 2/3;
+            padding-left: 20px;
+          }
+          
+          .stacks{
+            grid-row: 2/3;
+            grid-column: 1/2;
+            align-content: center;
+            margin-top: -80px;
+          }
+          .aboutme h2{
+            grid-row: 2/3;
+            grid-column: 1/2;
+          }
+          
+          .matter1 p{
+            font-size: 1.8rem;
+          }
+          .matter1 h1{
+               font-size: 6rem;
+          }
+          .stacks img{
+            margin-bottom: 10px;
+            min-height: 105px;
+          }
+        .tit1 {
+            padding-top: 10px;
+            margin-bottom: -50px;
+           
+        
+            
+          }
+          .tit1 h1{
+            font-size: 2rem;
+          }
+          .time{
+            flex-direction: column;
+            
+            
+          }
+          
+          .time div{
+            height: 200px;
+            width: 90%;
+            margin-top: 0px;
+           
+            margin-bottom: 5%;
+            
+            
+          }
+        
+          .abhyaz,.srm,.inter,.ssc h1{
+            font-size: 1.5rem;
+            font-family: "Poppins", sans-serif;
+        }
+        .abhyaz,.srm,.inter,.ssc h5{
+            font-size: 0.7rem;
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 20px;
+            margin-top: -10px;
+        }
+        .abhyaz,.srm,.inter,.ssc h3{
+            font-family: "Poppins", sans-serif;
+        }
+        .abhyaz,.srm,.inter,.ssc p{
+            font-family: "Poppins", sans-serif;
+        }
+        .inter h1{
+            font-size: 1.2rem;
+        }
+        .inter h3{
+            font-size: 0.7rem;
+        }
+        .inter h5{margin-bottom: 1px;}
+        
+        .ssc h1{
+            margin-top: 8px;
+            font-size: 1.2rem;
+        }
+        .ssc h5{
+            margin-bottom: 5px;
+        }
+        .time div::after{
+            display: none;
+        }
+        .tit2 {
+            padding-top: 10px;
+            margin-bottom: -50px;
+           
+    
+            
+          }
+          .tit2 h1{
+            font-size: 2rem;
+          }
+        .works{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 30%;
+            padding-bottom: 100px;
+            
+        }
+        .work1,.work2,.work3{
+            height: 370px;
+            width: 320px;
+            margin-top: 1%;
+            margin-bottom: 10px;
+            background-size: cover;
+            
+        }
+        .workinfo1 h1{
+            font-size: 2rem;
+            padding-right: 20px;
+        }
+        .workinfo1 h4{
+            font-size: 1.2rem;
+            padding-right: 10px;
+        }
+        .dcv{
+            border: 1px solid white;
+            width: 50%;
+            margin-right: -15%;
+            
+        }
+
+}
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
