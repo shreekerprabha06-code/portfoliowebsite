@@ -283,7 +283,7 @@ body {
     display: inline-block;
 
 
-    animation: visb 4.5s;
+    animation: visb 4.0s;
 
 
 }
@@ -311,7 +311,7 @@ body {
     animation:
         typing 1s steps(12),
         step-end infinite alternate;
-    animation-delay: 4.5s;
+    animation-delay: 4.0s;
 
 
 
@@ -324,7 +324,7 @@ body {
     display: inline-block;
 
 
-    animation: visb 7s;
+    animation: visb 5.5s;
 
 
 }
@@ -343,7 +343,7 @@ body {
     animation:
         typing 3s steps(46),
         step-end  alternate;
-    animation-delay: 7s;
+    animation-delay: 5.5s;
 
 
 
@@ -355,7 +355,7 @@ body {
     display: inline-block;
 
 
-    animation: visb 9.5s;
+    animation: visb 8.5s;
 
 
 }
@@ -373,7 +373,7 @@ body {
     animation:
         typing 1.9s steps(17),
         step-end  alternate;
-    animation-delay: 9.5s;
+    animation-delay: 8.5s;
 
 
 
@@ -454,6 +454,7 @@ body {
     height:50px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid rgba(255, 255, 255, 0.178);
    
@@ -617,9 +618,14 @@ body {
     padding-left: 50px ;
 
 }
+.works a {
+    text-decoration: none;
+    color: inherit; 
+    display: block; 
+}
 
 .work1{
-    background-image: url(images/Canva.png);
+    background-image: url(images/movie.png);
     
     width: 260px;
     height: 350px;
@@ -632,7 +638,7 @@ body {
     overflow: hidden;
     box-shadow: 3px 2px 10px rgb(0, 0, 0);
     transition: 0.3s;
-    
+   text-decoration: none;
     
     
 }
@@ -641,6 +647,8 @@ body {
     height: 100%;
 background: rgba(0, 0, 0, 0.421);
 border-radius: 5px;
+
+
 
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
@@ -660,6 +668,8 @@ display: flex;
         opacity: 1;
         
     }
+    
+    
 }
 .work2:hover{
     transform: scale(1.05);
@@ -680,12 +690,14 @@ display: flex;
     font-family: "Poppins", sans-serif;
     margin-bottom: 10px;
     
+    
 }
 .workinfo1 h4{
     font-family: "Poppins", sans-serif;
+    
 }
 .work2{
-    background-image: url(images/Canva\ \(1\).png);
+    background-image: url(images/food.png);
     width: 260px;
     height: 350px;
     background-color: rgb(34, 34, 34);
@@ -696,9 +708,10 @@ display: flex;
     margin-top: 17%;
     overflow: hidden;
     box-shadow: 3px 2px 10px rgb(0, 0, 0);
+
 }
 .work3{
-    background-image: url(images/Canva\ \(2\).png);
+    background-image: url(images/question.png);
     width: 260px;
     height: 350px;
     background-color: rgb(34, 34, 34);
@@ -1284,6 +1297,17 @@ display: flex;
     }
     .abhyaz,.srm,.inter,.ssc h3{
         font-family: "Poppins", sans-serif;
+        font-size: 0.7rem;
+        
+    }
+    .ssc h3{
+        margin-top: -5px;
+        padding-left: 1px;
+        
+    }
+     .inter h3{
+       font-size: 10rem;
+         
     }
     .abhyaz,.srm,.inter,.ssc p{
         font-family: "Poppins", sans-serif;
@@ -1317,19 +1341,28 @@ display: flex;
         font-size: 2rem;
       }
     .works{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 30%;
-        padding-bottom: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        
+        padding-bottom: 10px;
+        margin-top: 100px;
+        margin-right: 4em;
+
         
     }
     .work1,.work2,.work3{
-        height: 160px;
+        height: 190px;
         width: 175px;
         margin-top: 1%;
         margin-bottom: 10px;
         background-size: cover;
+        grid-row: auto;
+        grid-column:auto ;
+        
+    }
+    .work3{
+        margin-top: -200px;
         
     }
     .workinfo1 h1{

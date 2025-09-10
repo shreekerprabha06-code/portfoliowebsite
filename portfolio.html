@@ -94,7 +94,7 @@
                     <h1>About me</h1>
                     <p>I'm Computer Science graduate a Web Developer skilled in both frontend and backend technologies,
                         proficient in creating engaging user interfaces and robust server-side functionalities. With
-                        expertise in HTML, CSS, JavaScript, and backend frameworks like Node.js, I ensure seamless
+                        expertise in HTML, CSS,JavaScript,Java, Node.js and Spring Boot, SQL and NoSQL. I ensure seamless
                         digital experiences from design to deployment. Let's collaborate to build dynamic and efficient
                         web solutions tailored to your needs.</p>
                 </div>
@@ -112,6 +112,8 @@
                     <img src="images/Screenshot 2024-04-14 191000.png" alt="">
                     <img src="images/expressjs.png" alt="">
                     <img src="images/mongodb.png" alt="">
+                    <img src="images/1.png" alt="">
+                    <img src="images/Untitled design.png" alt="">
                 </div>
             </div>
         </div>
@@ -140,9 +142,9 @@
                     <p>cgpa : 7.99</p>
                 </div>
                 <div class="ssc">
-                    <h1>Full Stack Development Bootcamp</h1>
+                    <h1>Full Stack Development Traning</h1>
                     <h5>&nbsp;Mar2024-sep2024</h5>
-                    <h3>Talent Sprint</h3>
+                    <h3>NSE TalentSprint</h3>
                     
                     
                 </div>
@@ -155,24 +157,34 @@
                 <h1>My Works</h1>
            </div>
            <div class="works">
-            <div class="work1">
-                <div class="workinfo1">
-                    <h1>Canva <br>home page Replica</h1>
-                    <h4>Tools Used: <br>HTML,CSS,BOOTSTRAP</h4>
+             <a href="https://github.com/shreekerprabha06-code/movie-rating-website.git">
+           <div class="work1">
+                <div class="workinfo1" style="text-decoration: none;color: aliceblue;">
+                    
+                   <h1>IMDB like for Movie Rating</h1>
+                    <h4>Tools Used: <br>SpringBoot,SQL</h4>
+                    
                 </div>
             </div>
-            <div class="work2">
+            </a>
+            <a href="https://github.com/shreekerprabha06-code/food-recipie-website.git">
+            <div class="work2" style="text-decoration: none;color: aliceblue;">
                 <div class="workinfo1">
-                    <h1>IRCTC <br>Login page Replica</h1>
-                    <h4>Tools Used: <br>HTML,CSS</h4>
+                    <h1  style="text-decoration: none;">Social Media for Food Recipies</h1>
+                    <h4  style="text-decoration: none;">Tools Used: React,Express.js,<br>MongoDB</h4>
                 </div>
             </div>
-            <div class="work3">
-                <div class="workinfo1">
-                    <h1>Netflix<br>Home page </h1>
-                    <h4>Tools Used: <br>HTML,CSS BOOTSTRAP</h4>
+            </a>
+            <a href="https://github.com/shreekerprabha06-code/product-transparency-website.git"><div class="work3" >
+                <div class="workinfo1" style="text-decoration: none;color: aliceblue;">
+                    <h1>AI based question Generator<br>Home page </h1>
+                    <h4>Tools Used: <br>React, Express.js, MongoDB, LLM Integration</h4>
                 </div>
+                
             </div>
+            </a>
+            
+           
            </div>
         </div>
         <div class="tile" id="six">
@@ -182,31 +194,35 @@
             <div class="form">
                 <div class="dcv">
                     <h2>Download my Resume here</h2>
-                    <a href="Tejaswi Srikar Prabha Resume Online.pdf" download=""><button>Download CV</button></a>
+                    <a href="Srikar_Resume (17) (1).pdf" download=""><button>Download CV</button></a>
                 </div>
                 <div class="details">
-                    <div>
-                        <h2>Fill out your details here</h2>
-                    </div>
-                    <div class="textboxes">
-                        <div class="email">
-                            <label for="">Name <br></label>
-                            <input type="name" placeholder="&nbsp; Your Name">
-                        </div>
-                        <div class="email">
-                            <label for="">Email <br></label>
-                            <input type="email" placeholder="&nbsp; Your Email">
-                        </div>
-                        <div class="number">
-                            <label for="">Phone number <br></label>
-                            <input type="number" placeholder="&nbsp; Your Moblie Number">
-                        </div>
-                        <div class="btn">
-                            <button>submit</button>
-                        </div>
+    <div>
+        <h2>Fill out your details here</h2>
+    </div>
+    <form id="contact-form" class="textboxes">
+        <div class="email">
+            <label for="name">Name <br></label>
+            <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="email">
+            <label for="email">Email <br></label>
+            <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="number">
+            <label for="phone">Phone number <br></label>
+            <input type="tel" id="phone" placeholder="Your Mobile Number">
+        </div>
+        <div class="email">
+            <label for="message">Message <br></label>
+            <textarea id="message" placeholder="Your Message" rows="4" required style="width: 50%;"></textarea>
+        </div>
+        <div class="btn">
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+    </form>
+</div>
 
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -214,6 +230,35 @@
     <div class="footer">
         fdgfhj
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+ 
+   (function(){
+      emailjs.init("tlVxlvR_HZQT-lu67"); 
+   })();
+
+  
+   document.getElementById("contact-form").addEventListener("submit", function(e) {
+       e.preventDefault();
+
+       const params = {
+           from_name: document.getElementById("name").value,
+           email_id: document.getElementById("email").value,
+           phone: document.getElementById("phone").value,
+           message: document.getElementById("message").value
+       };
+
+       emailjs.send("service_td2yyxa", "template_eb14a6q", params)
+       .then(function(res) {
+           alert("Message sent successfully!");
+           document.getElementById("contact-form").reset();
+       }, function(error) {
+           alert("Failed to send message. Try again!");
+           console.error(error);
+       });
+   });
+</script>
+
 </body>
 
 </html>
